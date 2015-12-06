@@ -37,13 +37,12 @@
 
     </div>
 
-    {{! Ghost outputs important scripts and data with this tag }}
-    {{ghost_foot}}
-
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
     {{! The main JavaScript file for Casper }}
     <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
-<script id="dsq-count-scr" src="//backpackblog.disqus.com/count.js" async></script>
+    <script id="dsq-count-scr" src="//backpackblog.disqus.com/count.js" async></script>
+    {{! Ghost outputs important scripts and data with this tag }}
+    {{ghost_foot}}
 </body>
 </html>
