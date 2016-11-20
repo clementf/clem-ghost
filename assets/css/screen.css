@@ -465,7 +465,7 @@ margin on the iframe, cause it breaks stuff. */
 .inner {
     position: relative;
     width: 80%;
-    max-width: 710px;
+    max-width: 800px;
     margin: 0 auto;
 }
 
@@ -761,6 +761,11 @@ body.nav-opened .nav {
     border: none !important; /* Makes sure there is never a border */
 }
 
+#instagram-feed{
+    width: 70%;
+    margin: auto;
+}
+
 .blog-logo img {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -902,11 +907,25 @@ body.nav-opened .nav {
     animation-delay: 0.1s;
 }
 
+
+.owl-item article{
+    width: 800px;
+    margin: auto;      
+}
+
+.owl-item article h2{    
+    text-align: center;
+    margin: 20px;
+}
+.owl-item article h2 a{
+    color:#F9F9F9;
+}
+
 /* Every post, on every page, gets this style on its <article> tag */
 .post {
     position: relative;
     width: 80%;
-    max-width: 710px;
+    max-width: 800px;
     margin: 4rem auto;
     padding-bottom: 4rem;
     border-bottom: #FF7070 1px solid;
@@ -914,7 +933,7 @@ body.nav-opened .nav {
 }
 
 .post .img-container{
-    height: 200px;
+    height: 300px;
     margin-bottom: 15px;
     position: relative;
     overflow: hidden;
@@ -957,9 +976,24 @@ body:not(.post-template) .post-title {
     font-size: 0.9em;
     line-height: 1.7em;
 }
-
-.read-more {
+.center{
+    text-align: center;
+}
+.read-more, .older-posts, .newer-posts {
     text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    margin: 20px;
+    width: 200px;        
+    border:1px solid #FF7070;
+    background-color: #F9F9F9;
+    color:#FF7070;
+    border-radius: 4px;
+}
+
+.read-more:hover, .older-posts:hover, .newer-posts:hover{
+    background-color: #FF7070;
+    color:#F9F9F9;
 }
 
 .post-meta {
@@ -1176,8 +1210,9 @@ body:not(.post-template) .post-title {
    to be flexible at smaller screen sizes while the share
    links remain at a fixed width the whole time */
 .post-footer .share {
-    position: absolute;
+    position: absolute;    
     top: 6rem;
+    z-index: 50;
     right: 0;
     width: 140px;
 }
@@ -1490,7 +1525,7 @@ body:not(.post-template) .post-title {
 .pagination {
     position: relative;
     width: 80%;
-    max-width: 710px;
+    max-width: 800px;
     margin: 4rem auto;
     font-family: "Lato", sans-serif;
     font-size: 1.3rem;
@@ -1499,7 +1534,7 @@ body:not(.post-template) .post-title {
 }
 
 .pagination a {
-    color: #9EABB3;
+    color: #FF7070;
     transition: all 0.2s ease;
 }
 
@@ -1509,7 +1544,7 @@ body:not(.post-template) .post-title {
     position: absolute;
     display: inline-block;
     padding: 0 15px;
-    border: #bfc8cd 1px solid;
+    border: #FF7070 1px solid;
     text-decoration: none;
     border-radius: 4px;
     transition: border 0.3s ease;
@@ -1531,8 +1566,7 @@ body:not(.post-template) .post-title {
 
 .older-posts:hover,
 .newer-posts:hover {
-    color: #889093;
-    border-color: #98a0a4;
+    color: #F9F9F9;    
 }
 
 .extra-pagination {
@@ -1574,6 +1608,7 @@ body:not(.post-template) .post-title {
 
 .site-footer {
     position: relative;
+    background-color: #4A4A4A;
     margin: 8rem 0 0 0;
     padding: 1rem 15px;
     font-family: "Lato", sans-serif;
@@ -1582,16 +1617,19 @@ body:not(.post-template) .post-title {
     color: #BBC7CC;
 }
 
+.site-footer .fa-instagram{
+    width: 100%;
+    text-align: center;
+    color : #F9F9F9;
+    font-size: 3em;
+    display: block; 
+}
+
 .site-footer a {
     color: #BBC7CC;
     text-decoration: none;
     font-weight: bold;
 }
-
-.site-footer a:hover {
-    border-bottom: #bbc7cc 1px solid;
-}
-
 .poweredby {
     display: block;
     width: 45%;
@@ -1739,6 +1777,11 @@ body:not(.post-template) .post-title {
     .read-next-story.no-cover + .read-next-story.no-cover {
         border-top: rgba(0,0,100,0.06) 1px solid;
         border-left: none;
+    }
+
+    .post-footer .share {
+        position: static;
+        width: auto;
     }
 
 }
@@ -1936,11 +1979,7 @@ body:not(.post-template) .post-title {
         padding: 0 0 1.6rem 0;
         border-bottom: #EBF2F6 1px dashed;
     }
-
-    .post-footer .share {
-        position: static;
-        width: auto;
-    }
+    
 
     .post-footer .share a {
         margin: 1.4rem 0.8rem 0 0.8rem;
